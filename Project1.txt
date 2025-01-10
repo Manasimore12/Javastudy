@@ -1,0 +1,33 @@
+package com.demo;
+public class Second {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//area of rectangle
+		int length = 5;
+		int breadth = 10;
+		
+		int area_rectangle = (length * breadth);
+		System.out.println("Area of Rectangle : "+ area_rectangle );
+		//area of triangle
+		float height1 = 6.0f;
+		float base = 15.0f;
+		
+		float area_triangle = ((height1 * base)/2);
+		System.out.println("Area of Triangle : "+ area_triangle );
+		
+		//area of square
+		int side2 = 5;
+		
+		
+		int area_square = (side2*side2);
+		System.out.println("Area of Rectangle : "+ area_square );
+		
+		//area of circle
+		int radius = 5;
+		
+		float area_circle = (float) ( (radius*radius) * 3.14);  //typecasting is done to convert int value
+		System.out.println("Area of Circle : "+ area_circle );
+	}
+
+}
