@@ -1,0 +1,59 @@
+package com.demo;
+import java.util.*;
+
+public class LAB_2_2 {
+
+	public static void main(String[] args) {
+
+		
+		        Scanner scanner = new Scanner(System.in);
+		        double b = 0.0;
+		        while (true) {
+		            System.out.println("Choose one option:");
+		            System.out.println("1. Deposit");
+		            System.out.println("2. Withdraw");
+		            System.out.println("3. Check Balance");
+		            System.out.println("4. Exit");
+		            int ch = scanner.nextInt();
+
+		            switch (ch) {
+		                case 1:
+		                    System.out.print("Enter the amount to deposit: ");
+		                    double d = scanner.nextDouble();
+		                    if (d > 0) {
+		                        b += d;
+		                        System.out.println("Deposited successfully. Current balance: " + b);
+		                    } else {
+		                        System.out.println("Invalid deposit amount.");
+		                    }
+		                    break;
+
+		                case 2:
+		                    System.out.print("Enter the amount to withdraw: ");
+		                    double w = scanner.nextDouble();
+		                    if (w > 0 && w <= b) {
+		                        b -= w;
+		                        System.out.println("Withdrawn successfully. Current balance: " + b);
+		                    } else if (w > b) {
+		                        System.out.println("Insufficient balance.");
+		                    } else {
+		                        System.out.println("Invalid withdrawal amount.");
+		                    }
+		                    break;
+
+		                case 3:
+		                    System.out.println("Your current balance is: " + b);
+		                    break;
+
+		                case 4:
+		                    System.out.println("Thank you");
+		                    scanner.close();
+		                    return;
+
+		                default:
+		                    System.out.println("Invalid choice.Please try again.");
+		            }
+		        }
+		    }
+		}
+
