@@ -1,0 +1,21 @@
+package com.demo;
+
+public class LAB_3_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int s1 = 88;
+		int s2 = 80;
+		int s3 = 70;
+		int s4 = 69;
+		int s5 = 60;
+		float k = (float) 40.00;
+		String s = "Manasi More";
+		int total = (s1+s2+s3+s4+s5);		
+		System.out.println("Total: "+total);
+		System.out.println(s);
+		System.out.println(k);
+	}
+
+}
