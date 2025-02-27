@@ -1,0 +1,34 @@
+Lab_14
+package com.Assignment;
+
+public class AreaCalculater {
+	 public double area1(double length, double width) {
+	        return length * width;
+	    }
+	    
+	    public double area2(double radius) {
+	        return Math.PI * radius * radius;
+	    }
+	    
+	    public double area3(double base, double height, boolean isTriangle) {
+	        return 0.5 * base * height;
+	    }
+	}
+
+main.java
+
+package com.Assignment;
+
+public class Area_14 {
+	
+	    public static void main(String[] args) {
+	    	AreaCalculater calculator = new AreaCalculater();
+	        
+	        System.out.println("Rectangle Area: " + calculator.area1(10, 5));
+	        System.out.println("Circle Area: " + calculator.area2(7));
+	        System.out.println("Triangle Area: " + calculator.area3(6, 8, true));
+	    }
+}
+
+
+

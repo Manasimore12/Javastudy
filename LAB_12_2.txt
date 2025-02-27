@@ -1,0 +1,54 @@
+package com.demo2;
+
+public interface LAB_12 {
+	
+	    void resizeWidth(int width);
+	    void resizeHeight(int height);
+	}
+
+	
+MAin.java
+package com.demo2;
+
+
+
+public class LAB_12Main implements LAB_12 {
+    private int width;
+    private int height;
+
+    public LAB_12Main(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    
+    public void resizeWidth(int newWidth) {
+        if (newWidth > 0) {
+            this.width = newWidth;
+            System.out.println("New Width: " + width);
+        } else {
+            System.out.println("Width must be positive.");
+        }
+    }
+
+    public void resizeHeight(int newHeight) {
+        if (newHeight > 0) {
+            this.height = newHeight;
+            System.out.println("New Height: " + height);
+        } else {
+            System.out.println("Height must be positive.");
+        }
+    }
+
+    public void displaySize() {
+        System.out.println("Rectangle Dimensions - Width: " + width + ", Height: " + height);
+    }
+
+    public static void main(String[] args) {
+        LAB_12Main rect = new LAB_12Main(50, 30);
+        rect.displaySize();
+        rect.resizeWidth(100);
+        rect.resizeHeight(60);
+        rect.displaySize();
+    }
+}

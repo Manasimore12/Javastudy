@@ -1,0 +1,47 @@
+package com.demo2;
+
+public class LAB_10 {
+	 String name;
+	    int rollNumber;
+	    String phoneNumber;
+	    String address;
+
+	    // Constructor to initialize student details
+	    void Student(String name, int rollNumber, String phoneNumber, String address) {
+	        this.name = name;
+	        this.rollNumber = rollNumber;
+	        this.phoneNumber = phoneNumber;
+	        this.address = address;
+	    }
+	    void displayInfo() {
+	        System.out.println("Name: " + name);
+	        System.out.println("Roll Number: " + rollNumber);
+	        System.out.println("Phone Number: " + phoneNumber);
+	        System.out.println("Address: " + address);
+	        System.out.println();
+	    }
+
+
+}
+
+
+Student.java
+
+package com.demo2;
+
+public class LAB_10Student {
+	public static void main(String[] args) {
+        // Creating two objects of the 'Student' class
+        LAB_10 student1 = new LAB_10();
+        student1.Student("Sam", 101, "1234567890", "123 Main Street");
+        LAB_10 student2 = new LAB_10();
+        student2.Student("John", 102, "9876543210", "456 Elm Street");
+
+        // Displaying their information
+        System.out.println("Student 1 Information:");
+        student1.displayInfo();
+
+        System.out.println("Student 2 Information:");
+        student2.displayInfo();
+	}
+}

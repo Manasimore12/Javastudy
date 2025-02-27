@@ -1,0 +1,57 @@
+package com.demo2;
+
+public interface LAB_12 {
+	// Interface BankAccount
+	    void deposit(double a);
+	    void withdraw(double a);
+	}
+
+	
+
+Main.java
+package com.demo2;
+
+
+
+public class LAB_12Main implements LAB_12{
+	
+	    private double balance;
+	    public LAB_12Main(double initialBalance) {
+	        this.balance = initialBalance;
+	    }
+
+	    
+	    public void deposit(double a) {
+	        if (a > 0) {
+	            balance += a;
+	            System.out.println("Deposited: " + a);
+	        } else {
+	            System.out.println("Deposit amount must be positive.");
+	        }
+	    }
+
+	    
+	    public void withdraw(double a) {
+	        if (a > 0 && a <= balance) {
+	            balance -= a;
+	            System.out.println("Withdrawn: " + a);
+	        } else {
+	            System.out.println("Insufficient funds or invalid amount.");
+	        }
+	    }
+
+	    public void displayBalance() {
+	        System.out.println("Current Balance: " + balance);
+	    }
+
+	   
+	
+
+
+	 public static void main(String[] args) {
+	        LAB_12Main myAccount = new LAB_12Main(5000);
+	        myAccount.deposit(2000);
+	        myAccount.withdraw(1000); 
+	        myAccount.withdraw(7000); 
+	    }
+	 }

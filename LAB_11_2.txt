@@ -1,0 +1,79 @@
+package com.demo2;
+
+public class LAB_11_2 {
+	 double calculateArea() {
+	        return 0;
+	    }
+}
+
+Rectangle.java
+
+package com.demo2;
+
+public class Rectangle extends LAB_11_2{
+	private double length, width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+    
+     double calculateArea() {
+        return length * width;
+    }
+}
+
+
+Square.java 
+
+package com.demo2;
+
+public class Square extends LAB_11_2 {
+	private double side;
+
+    public Square(double side) {
+        this.side = side;
+    }
+
+
+     double calculateArea() {
+        return side * side;
+    }
+}
+
+Circle.java
+
+package com.demo2;
+
+public class Circle extends LAB_11_2{
+	private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+
+Main.java
+
+package com.demo2;
+
+public class LAB_11_2Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Rectangle rectangle = new Rectangle(10, 5);
+	        Square square = new Square(4);
+	        Circle circle = new Circle(3);
+	        Triangle triangle = new Triangle(6, 4);
+	        System.out.println("Area of Rectangle: " + rectangle.calculateArea());
+	        System.out.println("Area of Square: " + square.calculateArea());
+	        System.out.println("Area of Circle: " + circle.calculateArea());
+	        System.out.println("Area of Triangle: " + triangle.calculateArea());
+	}
+
+}

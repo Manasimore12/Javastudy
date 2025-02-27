@@ -1,0 +1,30 @@
+package com.demo2;
+
+public class LAB_11 {
+	 double ratePerUnit;
+
+	    public void setRate(double ratePerUnit) {
+	        this.ratePerUnit = ratePerUnit;
+	    }
+
+	    public double calculateBill(double unitsConsumed) {
+	        return unitsConsumed * ratePerUnit;
+	    }
+}
+
+
+Main.java
+
+package com.demo2;
+
+public class LAB_11Main {
+	public static void main(String[] args) {
+        LAB_11Rate residentialPlan = new LAB_11Rate();
+
+        residentialPlan.setRate(5.50);
+
+        double residentialUnits = 150;
+
+        System.out.println("Residential Plan Bill: " + residentialPlan.calculateBill(residentialUnits));
+    }
+}

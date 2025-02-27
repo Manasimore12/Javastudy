@@ -1,0 +1,73 @@
+package com.demo;
+
+public class LAB_5 {
+
+
+		// TODO Auto-generated method stub
+
+		    private int id;
+		    private String name;
+		    private double sal;
+
+		 
+		    public LAB_5(int id, String name, double salary) {
+		        this.id = id;
+		        this.name = name;
+		        this.sal = salary;
+		    }
+
+		    public int getId() {
+		        return id;
+		    }
+
+		    public void setId(int id) {
+		        this.id = id;
+		    }
+
+		    public String getName() {
+		        return name;
+		    }
+
+		    public void setName(String name) {
+		        this.name = name;
+		    }
+
+		    public double getSal() {
+		        return sal;
+		    }
+
+		    public void setSal(double salary) {
+		        this.sal = salary;
+		    }
+
+		    public double Increment(double per) {
+		        return sal + (sal * per / 100);
+		    }
+
+		    public void printDetails() {
+		        System.out.println("ID: " + id + ", Name: " + name + ", Salary: " + sal);
+		    }
+}
+
+
+
+
+Employee.java
+
+package com.demo;
+
+public class Employee_5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LAB_5 emp1 = new LAB_5(1, "Alice", 30000);
+		LAB_5 emp2 = new LAB_5(2, "Bob", 40000);
+
+        emp1.printDetails();
+        System.out.println("Incremented Salary: " + emp1.Increment(10) + "\n");
+
+        emp2.printDetails();
+        System.out.println("Incremented Salary: " + emp2.Increment(15));
+	}
+
+}

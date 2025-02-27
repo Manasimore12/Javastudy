@@ -1,0 +1,18 @@
+package com.demo;
+
+public class LAB_4_2 {
+	
+	    int i = 10;
+	    static int s = 20;
+
+	    public static void main(String[] args) {
+	        int localVar = 30;
+	        LAB_4_2 e = new LAB_4_2();
+
+	        System.out.println("Instance Variable: " + e.i);
+	        System.out.println("Static Variable: " + s);
+	        System.out.println("Local Variable: " + localVar);
+	    }
+
+
+}

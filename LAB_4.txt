@@ -1,0 +1,22 @@
+package com.demo;
+
+public class LAB_4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int s1 = 68;
+		int s2 = 90;
+		int s3 = 40;
+		int s4 = 59;
+		int s5 = 60;
+		int total = (s1+s2+s3+s4+s5);
+		float p = (float)total;                  
+	     float percentage = (float) ((p/500.0)*100.0);
+	     
+	     System.out.println("Percentage : "+ percentage);   
+		
+		System.out.println("Total: "+total);
+
+	}
+
+}

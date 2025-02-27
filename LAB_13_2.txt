@@ -1,0 +1,55 @@
+LAB_13_2
+
+package com.Assignment;
+
+interface Employee {
+double calSalary();
+}
+
+fulltime_emp.java
+
+package com.Assignment;
+
+public class Fulltime_Emp implements Employee {
+    private double salary;
+    
+    public Fulltime_Emp (double salary) {
+        this.salary = salary;
+    } 
+    public double calSalary() {
+        return salary;
+    }
+
+}
+
+parttime_emp.java
+
+package com.Assignment;
+
+public class Parttime_emp  implements Employee {
+    private double hourlyRate;
+    private int hoursWorked;
+    
+    public Parttime_emp(double hr, int hw) {
+        this.hourlyRate = hr;
+        this.hoursWorked = hw;
+    } 
+    public double calSalary() {
+        return hourlyRate * hoursWorked;
+    }
+	
+}
+
+main.java
+package com.Assignment;
+
+public class Maim_13_2 {
+	 public static void main(String[] args) {
+		 Fulltime_Emp fullTime = new Fulltime_Emp(50000);
+		 Parttime_emp partTime = new Parttime_emp(500, 15);     
+	     System.out.println("Full-time Employee Salary: " + fullTime.calSalary());
+	     System.out.println("Part-time Employee Salary: " + partTime.calSalary());
+	 }
+	 
+}
+

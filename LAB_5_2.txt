@@ -1,0 +1,102 @@
+package com.demo;
+
+public class LAB_5_1 {
+	
+	    private int id;
+	    private String name;
+	    private int m1, m2, m3;
+
+	    public LAB_5_1() {
+	    }
+
+	    public LAB_5_1(int id, String name, int marks1, int marks2, int marks3) {
+	        this.id = id;
+	        this.name = name;
+	        this.m1 = marks1;
+	        this.m2 = marks2;
+	        this.m3 = marks3;
+	    }
+
+	    public int getId() {
+	        return id;
+	    }
+
+	    public void setId(int id) {
+	        this.id = id;
+	    }
+
+	    public String getName() {
+	        return name;
+	    }
+
+	    public void setName(String name) {
+	        this.name = name;
+	    }
+
+	    public int getMarks1() {
+	        return m1;
+	    }
+
+	    public void setMarks1(int marks1) {
+	        this.m1 = marks1;
+	    }
+
+	    public int getMarks2() {
+	        return m2;
+	    }
+
+	    public void setMarks2(int marks2) {
+	        this.m2 = marks2;
+	    }
+
+	    public int getMarks3() {
+	        return m3;
+	    }
+
+	    public void setMarks3(int marks3) {
+	        this.m3 = marks3;
+	    }
+
+	    public double Per() {
+	        return (m1 + m2 + m3) / 3.0;
+	    }
+
+	    public String getResult() {
+	        if (m1 < 40 || m2 < 40 || m3 < 40) {
+	            return "Fail";
+	        }
+	        return "Pass";
+	    }
+
+	    public void pri() {
+	        System.out.println("ID: " + id + ", Name: " + name + ", Marks: " + m1 + ", " + m2 + ", " + m3);
+	    }
+	
+}
+
+
+Student .java
+
+package com.demo;
+
+public class Student_5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LAB_5_1 student1 = new LAB_5_1(1, "Rani", 85, 90, 78);
+		LAB_5_1 student2 = new LAB_5_1(2, "Manasi", 35, 50, 40);
+
+        student1.pri();
+        System.out.println("Percentage: " + student1.Per() + "%");
+        System.out.println("Result: " + student1.getResult() + "\n");
+
+        student2.pri();
+        System.out.println("Percentage: " + student2.Per() + "%");
+        System.out.println("Result: " + student2.getResult());
+    
+
+	}
+
+}
+
+

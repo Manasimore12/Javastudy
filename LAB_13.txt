@@ -1,0 +1,77 @@
+LAB_13
+
+package com.Assignment;
+
+interface Shape {
+	double getArea();
+}
+
+triangle.java
+
+package com.Assignment;
+
+public class Triangle implements Shape{
+    private double base, height;
+    
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
+    }
+    
+
+    public double getArea() {
+        return 0.5 * base * height;
+    }
+
+}
+
+rectangle.java
+
+package com.Assignment;
+
+class rectangle implements Shape {
+	 private double length, width;
+	    
+	    public rectangle(double length, double width) {
+	        this.length = length;
+	        this.width = width;
+	    }
+	    
+	    public double getArea() {
+	        return length * width;
+	    }
+}
+
+
+circle.java
+package com.Assignment;
+
+public class Circle implements Shape {
+    private double radius;
+    
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+    
+    
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+}
+
+main.java
+package com.Assignment;
+
+public class Main_13 {
+	public static void main(String[] args) {
+        rectangle re = new rectangle(10, 5);
+        Circle ci = new Circle(7);
+        Triangle tr = new Triangle(6, 8);
+        
+        System.out.println("Rectangle Area: " + re.getArea());
+        System.out.println("Circle Area: " + ci.getArea());
+        System.out.println("Triangle Area: " + tr.getArea());
+    }
+}
+

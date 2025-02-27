@@ -1,0 +1,32 @@
+LAB_14_1
+package com.Assignment;
+
+public class Overriding_method {
+	 void sound() {
+	        System.out.println("Perent Class ");
+	    }
+	}
+
+	
+ class Child extends Overriding_method {
+	    
+	    void sound() {
+	        System.out.println("Child Class");
+	    }
+	}
+
+Main.java
+package com.Assignment;
+
+public class Overriding_method_14 {
+
+	public static void main(String[] args) {
+		 Overriding_method Perent = new  Overriding_method (); 
+	        Perent.sound(); 
+	        Overriding_method  Child_class = new Child(); 
+	        Child_class.sound();
+
+	}
+
+}
+
