@@ -1,0 +1,51 @@
+package com.Assignment;
+
+ class Demo {	   
+	    protected double balance;
+
+	    public Demo( double balance) {
+	        this.balance = balance;
+	    }
+
+	    public void deposit(double amount) {
+	        if (amount > 0) {
+	            balance += amount;
+	            System.out.println(amount + "\ndeposited. New Balance: " + balance);
+	        } else {
+	            System.out.println("\nInvalid deposit amount.");
+	        }
+	    }
+
+	    public void withdraw(double amount) {
+	        if (amount > 0 && amount <= balance) {
+	            balance -= amount;
+	            System.out.println(amount + "\nRemaining Balance: " + balance);
+	        } else {
+	            System.out.println("\ninvalid withdrawal amount.");
+	        }
+	    }
+	}
+
+	public class LAB_16 extends Demo {
+		 protected String a;
+
+	    public LAB_16(String a, double balance) {
+	        super(balance);
+	        this.a = a;
+	    }
+	}
+
+MAin.java
+package com.Assignment;
+
+public class Main {
+	    public static void main(String[] args) {
+	        LAB_16 account = new LAB_16("manasi", 500);
+
+	        System.out.println("Account Holder: " + account.a);
+	        
+	        account.deposit(2000); 
+	        account.withdraw(1000);
+	    }
+	
+}

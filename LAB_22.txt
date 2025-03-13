@@ -1,0 +1,17 @@
+LAB_23
+
+package com.Assignment;
+import java.util.*;
+public class LAB_23 {
+	 public static void main(String[] args) {
+		 List<String> l = new ArrayList<>();
+		 l.add("Apple");
+		 l.add("Banana");
+		 l.add("Cherry");
+		 System.out.println("added elements: " + l);
+		 String e = l.get(1);
+		 System.out.println("Retrieved element:  " + e);
+		 l.remove("Banana");
+		 System.out.println("List after removing 'Banana': " + l);
+	 }
+}

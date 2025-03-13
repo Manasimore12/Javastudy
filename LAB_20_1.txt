@@ -1,0 +1,18 @@
+LAB_20_1
+package com.Assignment;
+
+import java.io.*;
+
+public class BufferWriterDemo {
+	 public static void main(String[] args) {
+	        try {
+	            BufferedWriter w = new BufferedWriter(new FileWriter("C:\\Users\\Manasi\\output.txt"));
+	            
+	            w.write("Hello, this is a test file.");	            
+	            w.close(); 
+	            System.out.println("Data successfully written to output.txt");
+	        } catch (IOException e) {
+	            System.out.println("Error writing to file: " + e.getMessage());
+	        }
+	    }
+}

@@ -1,0 +1,72 @@
+LAB_27
+
+package com.Assignment;
+
+public class LAB_27 {
+	    private int[] arr;
+	    private int front, rear, size, c;
+	    public LAB_27(int c) {
+	        this.c = c;
+	        arr = new int[c];
+	        front = 0;
+	        rear = -1;
+	        size = 0;
+	    }
+	    public void enqueue(int item) {
+	        if (isFull()) {
+	            System.out.println("Queue is full!");
+	            return;
+	        }
+	        rear = (rear + 1) % c; 
+	        arr[rear] = item;
+	        size++;
+	    }
+	    public int dequeue() {
+	        if (isEmpty()) {
+	            System.out.println("Queue is empty!");
+	            return -1;
+	        }
+	        int item = arr[front];
+	        front = (front + 1) % c; 
+	        size--;
+	        return item;
+	    }
+	    public int peek() {
+	        if (isEmpty()) {
+	            System.out.println("Queue is empty!");
+	            return -1;
+	        }
+	        return arr[front];
+	    }
+	    public boolean isEmpty() {
+	        return size == 0;
+	    }
+	    public boolean isFull() {
+	        return size == c;
+	    }
+	    public void display() {
+	        if (isEmpty()) {
+	            System.out.println("Queue is empty!");
+	            return;
+	        }
+	        System.out.print("Queue: ");
+	        for (int i = 0; i < size; i++) {
+	            System.out.print(arr[(front + i) % c] + " ");
+	        }
+	        System.out.println();
+	    }
+	    public static void main(String[] args) {
+	        LAB_27 queue = new LAB_27(5);
+	        queue.enqueue(10);
+	        queue.enqueue(20);
+	        queue.enqueue(30);
+	        queue.display();
+
+	        System.out.println("Dequeued: " + queue.dequeue());
+	        queue.display();
+
+	        System.out.println("Front element: " + queue.peek());
+	    }
+	
+
+}

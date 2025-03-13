@@ -1,0 +1,66 @@
+LAB_15
+package com.Assignment;
+
+public class Student {
+	    private String name;
+	    private int age;
+	    private String studentId;
+
+	    
+	    public Student(String name, int age, String studentId) {
+	        this.name = name;
+	        this.age = age;
+	        this.studentId = studentId;
+	    }
+
+	    // Getter and Setter methods
+	    public String getName() {
+	        return name;
+	    }
+
+	    public void setName(String name) {
+	        this.name = name;
+	    }
+
+	    public int getage() {
+	        return age;
+	    }
+
+	    public void setage(int age) {
+	        
+	            this.age = age;
+	        
+	    }
+
+	    public String getStudentId() {
+	        return studentId;
+	    }
+
+	    public void setStudentId(String studentId) {
+	        this.studentId = studentId;
+	    }
+
+	    // Display method
+	    public void displayStd() {
+	        System.out.println("Student ID: " + studentId);
+	        System.out.println("Name: " + name);
+	        System.out.println("Age: " + age);
+	    }
+	
+}
+
+Main.java
+
+package com.Assignment;
+
+public class Demo_15 {
+
+	public static void main(String[] args) {
+		Student student1 = new Student("Manasi", 20, "ST12345");
+        student1.displayStd();
+        student1.setage(21);
+        System.out.println("\nUpdated Detail:");
+        student1.displayStd();
+	}
+
+}

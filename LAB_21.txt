@@ -1,0 +1,16 @@
+LAB_21
+
+package com.Assignment;
+
+public class LAB_21 {
+	
+	    public static void main(String[] args) {
+	        String str = "hello";
+	       StringBuilder s=  new StringBuilder(str);
+	       s.reverse();
+	       s.toString();
+	       System.out.println(s);
+	    }
+	
+
+}

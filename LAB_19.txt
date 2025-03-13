@@ -1,0 +1,64 @@
+LAB_19
+
+package person;
+
+public class PersonalDetails {
+    public String n;
+    public int a;
+
+    public PersonalDetails(String n, int a) {
+        this.n = n;
+        this.a = a;
+    }
+
+    public void display() {
+        System.out.println("Name: " + n);
+        System.out.println("Age: " + a);
+    }
+}
+
+package person;
+
+public class Employment {
+    public String j, c;
+
+    public Employment(String j, String c) {
+        this.j = j;
+        this.c = c;
+    }
+
+    public void display() {
+        System.out.println("Job Title: " + j);
+        System.out.println("Company: " + c);
+    }
+}
+package person;
+
+public class Address {
+    public String state, country;
+
+    public Address(String state, String country) {
+        this.state = state;
+        this.country = country;
+    }
+
+    public void display() {
+        System.out.println("City: " + state);
+        System.out.println("State: " + country);
+    }
+}
+package person;
+
+public class Main {
+    public static void main(String[] args) {
+        PersonalDetails person = new PersonalDetails("Manasi", 21);
+        Address address = new Address("Maharashtra", "India");
+        Employment employment = new Employment("Engineer", "Tech");
+
+        System.out.println("\n Personal Details ");
+        person.display();
+        address.display();
+        employment.display();
+    }
+}
+

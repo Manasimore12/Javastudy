@@ -1,0 +1,18 @@
+LAB_23_1
+
+package com.Assignment;
+import java.util.*;
+public class LAB_23_1 {
+
+	public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+        list.add("Mango");
+        list.add("Apple");
+        list.add("Banana");
+        System.out.println("Before sorting: " + list);       
+        Collections.sort(list); 
+        System.out.println("After sorting: " + list);
+
+	}
+
+}

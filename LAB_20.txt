@@ -1,0 +1,23 @@
+LAB_20
+
+package com.Assignment;
+
+import java.io.*;
+
+public class BufferDemo {
+	 public static void main(String[] args) {
+	        try {
+	            BufferedReader r = new BufferedReader(new FileReader("C:\\Users\\Manasi\\SelfStudy1.txt"));
+
+	            String line;
+	            System.out.println("Reading from file:");
+	            while ((line = r.readLine()) != null) {
+	                System.out.println(line);
+	            }
+
+	            r.close();
+	        } catch (IOException e) {
+	            System.out.println("Error reading file: " + e.getMessage());
+	        }
+}
+}

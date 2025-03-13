@@ -1,0 +1,64 @@
+LAB_26_1
+
+package com.Assignment;
+
+public class LAB_26_1 {
+	public static double cal(int[] a) { 
+        if (a.length == 0) return 0; 
+        int sum = 0;
+        for (int num : a) {
+            sum += num;
+        }
+        return  sum / a.length; 
+    }
+    public static void main(String[] args) {
+        int[] n = {10, 20, 30, 40, 50};
+        System.out.println("Average: " + cal(n));
+    }
+}
+
+
+LAB_26_2
+
+package com.Assignment;
+class Student4 {
+    String name;
+    int age;
+    char grade;
+
+    public Student4(String name, int age, char grade) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+}
+public class LAB_26_2 {
+	
+	public static int findStudentByName(Student4[] students, String name) {
+        for (int i = 0; i < students.length; i++) {
+            if (students[i].name.equalsIgnoreCase(name)) { 
+                return i; 
+            }
+        }
+        return -1; 
+    }
+
+    public static void main(String[] args) {
+        Student4[] students = {
+            new Student4("Alice", 18,'A'),
+            new Student4("Bob", 19, 'B'),
+            new Student4("Charlie", 20, 'A'),
+            new Student4("David", 18, 'C'),
+            new Student4("Eve", 19, 'B')
+        };
+
+        String searchName = "Charlie";
+        int index = findStudentByName(students, searchName);
+
+        if (index != -1) {
+            System.out.println(searchName + " found at index " + index);
+        } else {
+            System.out.println(searchName + " not found.");
+        }
+    }
+}

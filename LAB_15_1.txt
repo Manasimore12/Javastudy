@@ -1,0 +1,39 @@
+LAB_15_1
+
+package com.Assignment;
+abstract class Student1 {
+	String name;
+
+    public Student1(String name) {
+        this.name = name;
+    }
+
+    abstract void displayDetails();
+}
+
+public class Student_info extends Student {
+    String branch;
+	
+
+    public Student_info(String name, String branch) {
+        super(name, branch);
+        this.branch = branch;
+    }
+
+    void displayDetails() {
+        System.out.println("Engineering Student Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Branch: " + branch);
+    }
+}
+
+Main.java
+
+package com.Assignment;
+
+public class LAB_15 {
+	public static void main(String[] args) {
+       Student_info student = new Student_info("Rani","AI&DS");
+        student.displayDetails();
+    }
+}

@@ -1,0 +1,11 @@
+LAB_25
+
+package com.Assignment;
+import java.util.*;
+public class LAB_25 {
+	public static void main(String[] args) {
+		String a[] = {"A", "X", "D", "Z", "Y", "C", "K", "B"};
+	    Arrays.sort(a, Collections.reverseOrder()); 
+	    System.out.println("The Desending Order: "+Arrays.toString(a)); 	    
+	}
+}

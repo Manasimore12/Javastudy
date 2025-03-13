@@ -1,0 +1,76 @@
+LAB_19_1
+
+package student;
+
+public class StudentDetails {
+    String n;
+    int r;
+
+    public StudentDetails(String n, int r) {
+        this.n = n;
+        this.r = r;
+    }
+
+    public void display() {
+        System.out.println("Student Name: " + n);
+        System.out.println("Roll No: " + r);
+    }
+}
+
+Mark.java
+package student;
+
+public class Marks {
+    int s1, s2, s3;
+
+    public Marks(int s1, int s2, int s3) {
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
+    }
+
+    public int getTotalMarks() {
+        return s1 + s2 + s3;
+    }
+
+    public void display() {
+        System.out.println("Marks: " + s1 + ", " + s2 + ", " + s3);
+    }
+}
+
+REsult.java
+
+package student;
+
+public class Result {
+    Marks m;
+
+
+public Result(Marks m) {
+    this.m = m;
+}
+
+public void displayResult() {
+    int t = m.getTotalMarks();
+    System.out.println("Total Marks: " + t);
+    System.out.println("Result: " + (t >= 120 ? "Pass" : "Fail"));
+    }
+}
+
+
+MAin.java
+
+package student;
+
+public class Main {
+    public static void main(String[] args) {
+        StudentDetails student = new StudentDetails("Manasi Ashok", 101);
+        Marks m = new Marks(45, 50, 40);
+        Result result = new Result(m);
+
+        System.out.println("Student Details");
+        student.display();
+        m.display();
+        result.displayResult();
+    }
+}

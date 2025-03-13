@@ -1,0 +1,38 @@
+LAB_26
+
+package com.Assignment;
+
+ class Student3 {
+	    String name;
+	    int age;
+	    char grade;
+
+	    public Student3(String name, int age, char grade) {
+	        this.name = name;
+	        this.age = age;
+	        this.grade = grade;
+	    }
+
+	    public void display() {
+	        System.out.println("Name: " + name + ", Age: " + age + ", Grade: " + grade);
+	    }
+	}
+
+	public class LAB_26 {
+	    public static void main(String[] args) {
+	        Student3[] students = {
+	            new Student3("Alice", 18, 'A'),
+	            new Student3("Bob", 19, 'B'),
+	            new Student3("Charlie", 20, 'A'),
+	            new Student3("David", 18, 'C'),
+	            new Student3("Eve", 19, 'B')
+	        };
+
+	        for (Student3 student : students) {
+	            student.display();
+	        }
+	    }
+	
+
+
+}

@@ -1,0 +1,30 @@
+LAB_16_1
+
+package com.Assignment;
+
+class Parent_class {
+ void name() {
+     System.out.println("Parent class");
+ }
+}
+
+class child_class extends Parent_class {
+ @Override
+ void name() {
+     System.out.println("Child class");
+ }
+}
+
+
+
+public class Class {
+ public static void main(String[] args) {
+	 Parent_class p = new Parent_class();
+     p.name(); 
+
+     Parent_class c = new child_class();
+     c.name();
+     
+ }
+}
+
